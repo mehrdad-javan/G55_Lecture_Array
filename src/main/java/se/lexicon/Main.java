@@ -2,6 +2,10 @@ package se.lexicon;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        int[] numbers = {2, 6, 1, 22, 7};
+        int result = ArrayDemo.findMaxNumber(numbers);
+        System.out.println("Max Number is : " + result);
+
     }
 }

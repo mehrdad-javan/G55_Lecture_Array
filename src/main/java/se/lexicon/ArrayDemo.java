@@ -50,7 +50,7 @@ public class ArrayDemo {
         System.out.println(Arrays.toString(numbers));
     }
 
-    public static void ex3(){
+    public static void ex3() {
         int[] originalArray = {2, 5, 8, 1, 9}; // [2, 5, 8, 1, 9]
         System.out.println("Original Array:");
         System.out.println(Arrays.toString(originalArray));
@@ -58,15 +58,36 @@ public class ArrayDemo {
         //  [2, 5, 8, 1, 9, 100]
         int[] newArray = new int[originalArray.length + 1]; // [0 , 0 , 0 , 0 , 0 , 0]
 
-        for(int i = 0  ;  i< originalArray.length ; i++ ){
+        for (int i = 0; i < originalArray.length; i++) {
             newArray[i] = originalArray[i];
         } // [2 , 5 , 8 , 1 , 9 , 0]
-        newArray[newArray.length -1] = 100; // [2 , 5 , 8 , 1 , 9 , 100]
+        newArray[newArray.length - 1] = 100; // [2 , 5 , 8 , 1 , 9 , 100]
 
         System.out.println("Expanded Array:");
         System.out.println(Arrays.toString(newArray));
 
     }
+
+    // Write a program that find the maximum number in a given array of integers?
+    public static int findMaxNumber(int[] numbers) { // [2 , 5 , 8000 , 1 , 9 , 100]
+        int maxNumber = numbers[0]; // maxNumber = 8000;
+
+        for (int i = 1; i < numbers.length; i++) { // [5 , 8000 , 1 , 9 , 100]
+            if (numbers[i] > maxNumber) {
+                maxNumber = numbers[i];
+            }
+        }
+
+        return maxNumber;
+
+    }
+    // scenarios to test
+    // 1. An array with positive numbers
+    // 2. An array with negative numbers
+    // 3. An array with a mix of negative & positive numbers
+    // 4. An Empty Array
+    // 5. An Array with a duplicate numbers
+    // ...
 
 
 
